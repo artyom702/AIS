@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css">
+  <title>Библиотека</title>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <div class="profile__cont">
+    <div class="container">
+      <h4 class="profile__title">
+        Данные читателя
+      </h4>
+      <div class="profile__form">
+        <div class="profile__form-items">
+          <div class="profile__form-item">
+            <p>
+              Номер читательского билета
+            </p>
+            <input
+              type="number"
+              class="profile__form-input"
+              readonly
+            >
+          </div>
+          <div class="profile__form-item">
+            <p>
+              Почта
+            </p>
+            <input
+              type="text"
+              class="profile__form-input"
+              readonly
+            >
+          </div>
+        </div>
+        <div class="profile__form-items">
+          <div class="profile__form-item">
+            <p>
+              Номер телефона
+            </p>
+            <input
+              type="text"
+              class="profile__form-input"
+              readonly
+            >
+          </div>
+          <div class="profile__form-item">
+            <p>
+              Ранг
+            </p>
+            <input
+              type="text"
+              class="profile__form-input"
+              readonly
+            >
+          </div>
+        </div>
+        <div class="profile__form-item">
+          <p>
+            Полное имя
+          </p>
+          <input
+            type="text"
+            class="profile__form-input-name"
+            readonly
+          >
+        </div>
+      </div>
+
+      <h4 class="profile__title">
+        Мои бронирования
+      </h4>
+      <div class="books__list" id="books__profile">
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+  <script type="module" src="profile.js"></script>
+</body>
+</html>

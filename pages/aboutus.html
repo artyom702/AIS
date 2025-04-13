@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css">
+  <title>Библиотека</title>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <div class="aboutus__cont">
+    <div class="container">
+      <h4 class="aboutus__title">
+        Наша команда
+      </h4>
+      <div class="aboutus__team">
+        <div class="aboutus__team-item">
+          <div class="aboutus__item-id">
+            <img src="/images/nikita.png" alt="">
+            <span>
+              Никита
+            </span>
+          </div>
+          <div class="aboutus__item-text">
+            <p>
+              Backend-разработчик, новый Стив Джобс, но скрывает это. Сделает вам свагер закрытыми глазами и без ноутбука, так как настолько преисполнился в своей нише, что пишет код с помощью силы мысли удалёно.
+            </p>
+            <p>
+              тг-@Seryozha_Michurin
+            </p>
+          </div>
+        </div>
+        <div class="aboutus__team-item">
+          <div class="aboutus__item-id">
+            <img src="/images/artyom.png" alt="">
+            <span>
+              Артём
+            </span>
+          </div>
+          <div class="aboutus__item-text">
+            <p>
+              Акула frontend разработки, может сверстать сайт любой сложности, также как сверстал эту библиотеку за 5 минут не глядя, так как просто появилось свободное время. Документацию по фреймворкам ест на завтрак, запивая чистым тайп скриптом. По совместительству также главный дизайнер всея Руси.
+            </p>
+            <p>
+              тг-@trsv_Artyom
+            </p>
+          </div>
+        </div>
+        <div class="aboutus__team-item">
+          <div class="aboutus__item-id">
+            <img src="/images/iskander.png" alt="">
+            <span>
+              Искандер
+            </span>
+          </div>
+          <div class="aboutus__item-text">
+            <p>
+              Живая легенда, плейбой, миллиардер и филантроп. По выходным может так протестировать проект, что даже казалось бы в идеальном продукте найдет ошибок на год работы. Также в дополнение ко всему пояснит вам за любой отчет лично.
+            </p>
+            <p>
+              тг-@isskander_is
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="aboutus__title">
+        Связь с нами
+      </h4>
+      <form class="feedback__form" id="feedbackForm">
+        <div class="feedback__form-item">
+          <p>
+            Сообщение
+          </p>
+          <textarea
+            name="message"
+            class="feedback__form-message"
+          >
+          </textarea>
+        </div>
+        <div class="feedback__form-user">
+          <div class="feedback__form-item">
+            <p>
+              Имя
+            </p>
+            <input
+              name="name"
+              type="text"
+              class="feedback__form-input"
+            >
+          </div>
+          <div class="feedback__form-item">
+            <p>
+              Почта
+            </p>
+            <input
+              name="email"
+              type="text"
+              class="feedback__form-input"
+            >
+          </div>
+        </div>
+        <div class="feedback_send">
+          <div class="feedback__form-item">
+            <p>
+              Тема обращения
+            </p>
+            <input
+              name="subject"
+              type="text"
+              class="feedback__form-input-theme"
+            >
+          </div>
+          <button class="feedback__btn" type="submit">
+            Отправить
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <script type="module" src="main.js"></script>
+  <script type="module" src="feedback.js"></script>
+</body>
+</html>

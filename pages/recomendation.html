@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css">
+  <title>Библиотека</title>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <div class="container">
+    <div class="recomendation__cont">
+      <h2 class="recomendation__title">
+        Персональные рекомендации
+      </h2>
+      <section class="personal__recomendation">
+        <h4 class="list__recomendation-title">
+          На основе ваших предпочтений
+        </h4>
+        <div id="recommended-list" class="book-section"></div>
+      </section>
+
+      <section class="popular__recomendation">
+        <h4 class="list__recomendation-title">
+          Популярные книги
+        </h4>
+        <div id="popular-list" class="book-section"></div>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="bookingFon"></div>
+  <div class="modal" id="bookingForm">
+    <div class="booking">
+      <div class="booking__item">
+        <p class="creation_text">Название книги</p>
+        <input
+          id="bookTitleDisplay"
+          class="booking__input"
+          type="text"
+          readonly
+        />
+      </div>
+
+      <div class="booking__item">
+        <p class="creation_text">Срок взятия</p>
+        <input
+          id="bookingDuration"
+          class="booking__input"
+          min="1"
+          type="number"
+        />
+      </div>
+
+      <div class="booking__item">
+        <p class="creation_text">Дата взятия</p>
+        <input
+          id="bookingDate"
+          class="booking__input"
+          type="date"
+        />
+      </div>
+
+      <button
+        class="booking__btn"
+        onClick="submitBookingForm()"
+      >
+        Забронировать
+      </button>
+      <div
+        class="booking__btn-close"
+        onClick="closeBookingForm()"
+      >
+        <p>X</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+  <script type="module" src="recomendation.js"></script>
+</body>
+</html>

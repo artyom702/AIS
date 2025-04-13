@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Библиотека</title>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+      <div class="search">
+        <h2 class="search__title">Поиск книги</h2>
+        <div class="input__cont">
+          <p class="input__title">Автор</p>
+          <input
+            class="search__input"
+            type="text"
+            id="author"
+            placeholder="Введите ФИО автора"
+          />
+        </div>
+        <div class="input__cont">
+          <p class="input__title">Название</p>
+          <input
+            class="search__input"
+            id="title"
+            type="text"
+            placeholder="Введите название книги"
+          />
+        </div>
+        <div class="input__cont">
+          <p class="input__title">Жанр</p>
+          <select class="search__input" id="genre">
+            <option value="" disabled selected hidden>
+              Выберите жанр книги
+            </option>
+            <option value="Novel">роман</option>
+            <option value="Poem">поэма</option>
+            <option value="Story">рассказ</option>
+            <option value="Play">пьеса</option>
+          </select>
+        </div>
+        <!-- <input class="checkbox" type="checkbox" id="checkbox" />
+        <label class="input__text-check" for="checkbox">В наличии</label> -->
+        <div class="buttons">
+          <button class="search__btn" onclick="searchBooks()">Поиск</button>
+          <button class="delete__btn" onclick="clearFilters()">Очистить</button>
+        </div>
+      </div>
+
+      <div class="books__list" id="books__list"></div>
+    </div>
+    <div class="modal-overlay" id="bookingFon"></div>
+    <div class="modal" id="bookingForm">
+      <div class="booking">
+        <div class="booking__item">
+          <p class="creation_text">Название книги</p>
+          <input
+            id="bookTitleDisplay"
+            class="booking__input"
+            type="text"
+            readonly
+          />
+        </div>
+
+        <div class="booking__item">
+          <p class="creation_text">Срок взятия</p>
+          <input
+            id="bookingDuration"
+            class="booking__input"
+            min="1"
+            type="number"
+          />
+        </div>
+
+        <div class="booking__item">
+          <p class="creation_text">Дата взятия</p>
+          <input
+            id="bookingDate"
+            class="booking__input"
+            type="date"
+            min=""
+          />
+        </div>
+
+        <button
+          class="booking__btn"
+          onClick="submitBookingForm()"
+        >
+          Забронировать
+        </button>
+        <div
+          class="booking__btn-close"
+          onClick="closeBookingForm()"
+        >
+          <p>X</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
